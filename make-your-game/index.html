@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="game">
+    <div class="attributes">
+      <div>Level: <span id="level">0</span></div>
+      <div>Score: <span id="score">0</span></div>
+      <div>Time: <span id="time">00:00:00</span></div>
+      <div>Lives: <span id="lives">0</span></div>
+    </div>
+    <div class="main"></div>
+    <div id="game-over" style="display: none;">
+      <p>Game over</p>
+      <button class="button primary" id="game-over-restart">Restart</button>
+    </div>
+    <div id="life-lost" style="display: none;">
+      <p>You lost a life</p>
+      <button class="button primary" id="life-lost-continue">Continue</button>
+    </div>
+    <div>
+      <div class="buttons">
+        <button class="button primary" id="start">Start</button>
+        <button class="button" id="pause" style="display: none;">Pause</button>
+        <button class="button" id="restart" style="display: none;">Restart</button>
+      </div>
+      <div id="next-tetro" style="display: none;"></div>
+    </div>
+  </div>
+  <script src="app.js"> </script>
+</body>
+</html>

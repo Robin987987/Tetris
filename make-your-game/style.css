@@ -1,0 +1,135 @@
+body {
+  background-color: #1b1b1b;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  padding: 40px;
+  height: calc(100vh - 80px);
+  box-sizing: border-box;
+}
+body button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  height: 100%;
+}
+.main {
+  height: 100%;
+  max-height: 800px;
+  aspect-ratio: 0.5;
+  display: flex;
+  flex-wrap: wrap;
+  outline: 2px solid #858585;
+  background-color: #343434;
+}
+.cell {
+  height: calc(100% / 20);
+  aspect-ratio: 1/1;
+  outline: 0.5px solid #858585;
+}
+#game-over, #life-lost {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+#game-over {
+  animation: fade-in 2s ease-in forwards;
+}
+#life-lost {
+  animation: fade-in 1s ease-in forwards;
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+#next-tetro {
+  width: fit-content;
+  outline: 2px solid #858585;
+  background-color: #343434;
+  font-size: 0em;
+}
+#next-tetro .cell {
+  height: 20px;
+  width: 20px;
+  outline: 0.5px solid #858585;
+  display: inline-block;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 32px;
+  width: 160px;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #202124;
+  border: 1px solid #858585;
+  box-sizing: border-box;
+  border-radius: 4px;
+  min-width: 38px;
+  cursor: pointer;
+  color: #f1f3f4;
+  padding: 8px 16px;
+  font-size: 18px;
+}
+.button:hover {
+  background-color: rgb(60,64,67);
+}
+.primary {
+  background-color: #009900;
+  border: none;
+  min-width: 160px;
+}
+.primary:hover {
+  background-color: #015e01;
+}
+.attributes {
+  max-width: 180px;
+  height: fit-content;
+  outline: 2px solid #858585;
+  background-color: #343434;
+  padding: 16px 16px;
+}
+.lTetromino {
+ background-color: #015A9D;
+}
+.jTetromino {
+  background-color: #F79622;
+}
+.zTetromino {
+ background-color: #EE2733;
+}
+.sTetromino {
+   background-color: #4EB748;
+}
+.tTetromino {
+  background-color: #922B8C;
+}
+.oTetromino {
+  background-color: #FDE100
+}
+.iTetromino {
+  background-color: #2AACE2
+}
+.fixedCell {
+  background-color: #4EB748;
+}
